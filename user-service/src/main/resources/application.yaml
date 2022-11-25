@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: user-service
+server:
+  port: '0'
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    registry-fetch-interval-seconds: 30
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eurekauser:eureka@${eureka.instance.hostname}:8761/eureka/
